@@ -1,11 +1,64 @@
-tap "homebrew/cask"
-tap "homebrew-ffmpeg/ffmpeg"
-tap "petere/postgresql"
-tap "cloudflare/cloudflare"
-tap "bramstein/webfonttools"
-tap "teamookla/speedtest"
+tap "homebrew/bundle"
+tap "homebrew/core"
 
-cask_args appdir: "~/Applications", require_sha: true
+if OS.mac?
+  cask_args appdir: "~/Applications", require_sha: true
+
+  # Taps
+  tap "homebrew/cask"
+  tap "homebrew-ffmpeg/ffmpeg"
+  tap "petere/postgresql"
+  tap "cloudflare/cloudflare"
+  tap "bramstein/webfonttools"
+  tap "teamookla/speedtest"
+
+  # Dev Applications
+  cask "iterm2"
+  cask "imageoptim" # a tool to optimize images
+  cask "font-fira-code"
+  cask "font-jetbrains-mono"
+  cask "font-cascadia-mono"
+  cask "font-3270-nerd-font"
+  cask "visual-studio-code"
+  cask "charles"
+  cask "console"
+  cask "cyberduck"
+  cask "figma"
+  cask "figmadaemon"
+  cask "ghidra"
+  cask "google-chrome"
+  cask "gpg-suite"
+  cask "linear-linear"
+
+
+  # Other Applications
+  cask "bettertouchtool"
+  cask "chipmunk"
+  cask "clip-studio-paint"
+  cask "dash"
+  cask "deadbolt"
+  cask "desmume"
+  cask "devtoys"
+  cask "discord"
+  cask "elephicon"
+  cask "epic-games"
+  cask "glance"
+  cask "hammerspoon"
+  cask "handbrake"
+  cask "iconizer"
+  cask "iina"
+  cask "imhex"
+  cask "loading"
+  cask "meld"
+  cask "mochi"
+  cask "ngrok"
+  cask "notion"
+  cask "nullpomino"
+  cask "pika"
+  cask "spotify"
+  cask "transmission"
+  cask "unpkg"
+end
 
 # Core stuff
 brew "cask"
@@ -58,7 +111,7 @@ brew "glide"
 
 # Media tools
 brew "imagemagick" args: ["with-webp"]
-brew "youtube-dl"
+brew "yt-dlp"
 brew "sdl_image"
 brew "media-info"
 brew "ffmpeg" args: ["with-libass", "with-libvpx", "with-libvorpis", "with-libsoxr", "with-libbluray"]
@@ -92,7 +145,7 @@ brew "httpie"
 brew "yarn"
 brew "speedtest"
 brew "wget" args: ["with-iri"], restart_service: :changed
-brew "archey4"
+brew "neofetch"
 brew "awscli"
 brew "brotli"
 brew "vim" args: ["with-override-system-vi"]
