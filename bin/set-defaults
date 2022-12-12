@@ -1,0 +1,9 @@
+
+#!/bin/sh
+#
+# Sets macOS defaults by running $DOTFILES/macos/set-defaults.sh.
+
+if test "$(uname)" = "Darwin"
+then
+  exec $DOTFILES/os/macos/set-defaults.sh
+fi
