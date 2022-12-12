@@ -14,11 +14,11 @@ fi
 
 if test $(which brew)
 then
-  echo " Installing from Brewfile..."
-
   # Installs bundler and also runs brew update --auto-update
+  echo "> brew bundle"
   brew bundle
 
+  echo "> brew upgrade"
   # Upgrade formulae
   brew upgrade
 
