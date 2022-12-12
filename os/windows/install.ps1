@@ -82,6 +82,9 @@ else {
 # Install packages: choco
 Write-Host "Installing Apps via chocolatey package manager..." -ForegroundColor Green
 
+# Clink
+choco install clink
+
 # VSCODE
 choco install vscode -y
 # code --intall-extension Shan.code-settings-sync
