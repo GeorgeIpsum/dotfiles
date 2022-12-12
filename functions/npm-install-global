@@ -1,0 +1,15 @@
+#!/bin/sh
+
+npm_install_global() {
+  if test ! $(which "$1")
+  then
+    if test $(which npm)
+    then
+      sudo npm install -g "$1";
+    else
+      echo "npm is not installed!";
+    fi
+  else
+    echo "${1} is already installed.";
+  fi
+}
