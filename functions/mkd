@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# https://github.com/mathiasbynens/dotfiles/blob/main/.functions
+
+# Create a new directory and enter it
+function mkd() {
+	mkdir -p "$@" && cd "$_";
+}
