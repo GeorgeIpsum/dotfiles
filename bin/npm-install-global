@@ -1,14 +1,21 @@
 #!/bin/sh
 
-if test ! $(which "$1")
+if test ! $(which "$@")
 then
   if test $(which npm)
   then
-    echo "Installing ${1}"
-    npm install -g "$1";
+    for var in "$@"
+    do
+      if test ! $(which "$var")
+        echo "> Installing $var"
+        npm install -g "$var";
+      else
+        echo "$var is already installed."
+      fi
+    done
   else
     echo "npm is not installed!";
   fi
 else
-  echo "${1} is already installed.";
+  echo "All npm global commands are already installed.";
 fi
