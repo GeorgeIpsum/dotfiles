@@ -30,7 +30,6 @@ if OS.mac?
   cask "gpg-suite"
   cask "linear-linear"
 
-
   # Other Applications
   cask "bettertouchtool"
   cask "chipmunk"
